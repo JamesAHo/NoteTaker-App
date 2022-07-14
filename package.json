@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JamesAHo/NoteTaker-App/issues"
   },
-  "homepage": "https://github.com/JamesAHo/NoteTaker-App#readme"
+  "homepage": "https://github.com/JamesAHo/NoteTaker-App#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
