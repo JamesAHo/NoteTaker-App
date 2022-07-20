@@ -42,6 +42,6 @@ Once clicked, user will lead to another page that they can store all their notes
 
 Repository link: https://github.com/JamesAHo/NoteTaker-App
 
-Heroku link : https://notet-taker-app.herokuapp.com/notes 
+Heroku link : https://notet-taker-app.herokuapp.com
 
 
