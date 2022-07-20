@@ -12,17 +12,17 @@ if (window.location.pathname === '/notes') {
   noteList = document.querySelectorAll('.list-container .list-group');
 }
 
-// Show an element
+// to show elements
 const show = (elem) => {
   elem.style.display = 'inline';
 };
 
-// Hide an element
+// to hide elements
 const hide = (elem) => {
   elem.style.display = 'none';
 };
 
-// activeNote is used to keep track of the note in the textarea
+// user's note input
 let activeNote = {};
 
 const getNotes = () => 
@@ -77,9 +77,9 @@ const handleNoteSave = () => {
   });
 };
 
-// Delete the clicked note
+// To delete notes
 const handleNoteDelete = (e) => {
-  // prevents the click listener for the list from being called when the button inside of it is clicked
+  
   e.stopPropagation();
 
   const note = e.target;
@@ -95,14 +95,14 @@ const handleNoteDelete = (e) => {
   });
 };
 
-// Sets the activeNote and displays it
+// display the activenotes
 const handleNoteView = (e) => {
   e.preventDefault();
   activeNote = JSON.parse(e.target.parentElement.getAttribute('data-note'));
   renderActiveNote();
 };
 
-// Sets the activeNote to an empty object and allows the user to enter a new note
+// allow user to enter new notes
 const handleNewNoteView = (e) => {
   e.preventDefault();
   activeNote = {};
@@ -117,7 +117,7 @@ const handleRenderSaveBtn = () => {
   }
 };
 
-// Render the list of note titles
+// notes title
 const renderNoteList = async (notes) => {
   let jsonNotes = await notes.json();
   if (window.location.pathname === '/notes') {
@@ -126,7 +126,7 @@ const renderNoteList = async (notes) => {
 
   let noteListItems = [];
 
-  // Returns HTML element with or without a delete button
+  
   const createLi = (text, delBtn = true) => {
     const liEl = document.createElement('li');
     liEl.classList.add('list-group-item');
@@ -170,7 +170,7 @@ const renderNoteList = async (notes) => {
   }
 };
 
-// Gets notes from the db and renders them to the sidebar
+// retreieve notes from database
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
 if (window.location.pathname === '/notes') {
