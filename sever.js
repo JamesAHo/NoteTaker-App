@@ -42,7 +42,7 @@ app.post("/api/notes", (req, res) => {
         // assign id to each new note
         // if no items in notes array, assign as 10
         if (notes.length > 0) {
-            let lastId = notes[notes.length - 1] .lastId
+            let lastId = notes[notes.length - 1].lastId
             var id = parseInt(lastId) + 1
         } else {
             var id = 10;
